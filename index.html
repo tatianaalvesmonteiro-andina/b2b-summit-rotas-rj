@@ -204,7 +204,6 @@
     /* ── MIX CHART ── */
     .mix-grid {
       display: grid;
-      /* Alterado para forçar 3 colunas exatas na mesma linha */
       grid-template-columns: repeat(3, 1fr); 
       gap: 16px;
       margin-bottom: 32px;
@@ -262,18 +261,6 @@
     }
     .canal-row:last-child { border-bottom: none; }
     .canal-row:hover { background: rgba(255,255,255,0.03); }
-    .canal-bar-wrap {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .canal-bar {
-      height: 4px;
-      border-radius: 2px;
-      background: var(--red);
-      opacity: 0.7;
-    }
     .canal-val { font-weight: 600; text-align: right; }
 
     /* ── INSIGHT BOX ── */
@@ -392,11 +379,10 @@
     .section.active .container > *:nth-child(4) { animation-delay: .18s; }
     .section.active .container > *:nth-child(5) { animation-delay: .24s; }
 
-    /* Ajustes para Telas Menores (Celulares) */
+    /* Ajustes para Telas Menores */
     @media (max-width: 600px) {
       .sec-header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .canal-head, .canal-row { grid-template-columns: 1fr 70px 70px; font-size: 13px; }
-      /* Adicionado para os cards ficarem um abaixo do outro no celular */
       .mix-grid { grid-template-columns: 1fr; } 
     }
   </style>
@@ -457,35 +443,28 @@
     </div>
 
     <h3 style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Mix de Portfólio</h3>
-<div class="mix-grid">
-  
-  <div class="mix-card">
-    <div class="mix-pct big">66%</div>
-    <div><div class="mix-name">SSD</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct med">33%</div>
-    <div><div class="mix-name">Still</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct sml">1%</div>
-    <div><div class="mix-name">Outros</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct sml">4%</div>
-    <div><div class="mix-name">Retornável NARTD</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct big">48%</div>
-    <div><div class="mix-name">SS NARTD</div></div>
-  </div>
-
-</div>
-   
+    <div class="mix-grid">
+      <div class="mix-card">
+        <div class="mix-pct big">66%</div>
+        <div><div class="mix-name">SSD</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct med">33%</div>
+        <div><div class="mix-name">Still</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct sml">1%</div>
+        <div><div class="mix-name">Outros</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct sml">4%</div>
+        <div><div class="mix-name">Retornável NARTD</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct big">48%</div>
+        <div><div class="mix-name">SS NARTD</div></div>
+      </div>
+    </div>
 
     <h3 style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Participação por Canal</h3>
     <div class="canal-wrap">
@@ -571,36 +550,28 @@
     </div>
 
     <h3 style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Mix de Portfólio</h3>
-<div class="mix-grid">
-  
-  <div class="mix-card">
-    <div class="mix-pct big">74%</div>
-    <div><div class="mix-name">SSD</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct med">25%</div>
-    <div><div class="mix-name">Still</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct sml">1%</div>
-    <div><div class="mix-name">Outros</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct sml">37%</div>
-    <div><div class="mix-name">SS NARTD</div></div>
-  </div>
-  
-  <div class="mix-card">
-    <div class="mix-pct sml">3%</div>
-    <div><div class="mix-name">Retornável NARTD</div></div>
-  </div>
-
-</div>
-
-  
+    <div class="mix-grid">
+      <div class="mix-card">
+        <div class="mix-pct big">74%</div>
+        <div><div class="mix-name">SSD</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct med">25%</div>
+        <div><div class="mix-name">Still</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct sml">1%</div>
+        <div><div class="mix-name">Outros</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct sml">37%</div>
+        <div><div class="mix-name">SS NARTD</div></div>
+      </div>
+      <div class="mix-card">
+        <div class="mix-pct sml">3%</div>
+        <div><div class="mix-name">Retornável NARTD</div></div>
+      </div>
+    </div>
 
     <h3 style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Participação por Canal</h3>
     <div class="canal-wrap">
@@ -632,7 +603,7 @@
       <div class="canal-row">
         <div>Moderno</div>
         <div class="canal-val">3%</div>
-          <div class="canal-val">74%</div>
+        <div class="canal-val">74%</div>
       </div>
     </div>
 
@@ -699,7 +670,7 @@
     </div>
 
     <div class="insight" style="margin-top:32px;">
-      <strong>Como inserir seu mapa:</strong> No Google My Maps, abra o mapa → clique nos 3 pontos → <em>Incorporar no meu site</em> → copie o código <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:3px;"><iframe></code> e cole dentro do comentário correspondente no HTML.
+      <strong>Como inserir seu mapa:</strong> No Google My Maps, abra o mapa → clique nos 3 pontos → <em>Incorporar no meu site</em> → copie o código <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:3px;">&lt;iframe&gt;</code> e cole dentro do comentário correspondente no HTML.
     </div>
 
   </div>
@@ -711,8 +682,16 @@
 
 <script>
   function showTab(id, btn) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    var sections = document.querySelectorAll('.section');
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].classList.remove('active');
+    }
+    
+    var buttons = document.querySelectorAll('.tab-btn');
+    for (var j = 0; j < buttons.length; j++) {
+      buttons[j].classList.remove('active');
+    }
+    
     document.getElementById(id).classList.add('active');
     btn.classList.add('active');
   }
