@@ -44,11 +44,59 @@
       position: absolute;
       inset: 0;
       background:
+        radial-gradient(circle, rgba(232,0,29,0.28) 1px, transparent 1.5px),
+        radial-gradient(circle at 83% 30%, rgba(232,0,29,0.34) 0%, rgba(232,0,29,0.12) 24%, transparent 46%),
         radial-gradient(ellipse 60% 50% at 50% -10%, rgba(232,0,29,0.22) 0%, transparent 70%),
-        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.03) 40px),
-        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.03) 40px);
+        linear-gradient(90deg, rgba(10,10,10,0.98) 0%, rgba(10,10,10,0.78) 56%, rgba(10,10,10,0.44) 100%);
+      background-size:
+        22px 22px,
+        auto,
+        auto,
+        auto;
       pointer-events: none;
+      z-index: 0;
     }
+    .cristo-img {
+      position: absolute;
+      right: clamp(-50px, -2vw, 0px);
+      bottom: 0;
+      height: 92%;
+      max-height: 520px;
+      opacity: 0.88;
+      z-index: 0;
+      pointer-events: none;
+      filter: drop-shadow(0 0 34px rgba(232,0,29,0.56));
+    }
+
+    .hero-title-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(18px, 4vw, 36px);
+    }
+
+    .hero-logo-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: clamp(16px, 3vw, 28px);
+      border-right: 1px solid rgba(255,255,255,0.22);
+      flex-shrink: 0;
+    }
+
+    .hero-logo {
+      width: clamp(88px, 10vw, 135px);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 12px 24px rgba(0,0,0,0.48)) drop-shadow(0 0 18px rgba(232,0,29,0.30));
+    }
+
+    .hero-title-text {
+      text-align: left;
+    }
+
     .hero-tag {
       display: inline-block;
       font-size: 11px;
@@ -62,86 +110,6 @@
       margin-bottom: 24px;
       position: relative;
     }
-    .hero-cristo {
-      position: absolute;
-      top: 42px;
-      right: clamp(18px, 7vw, 110px);
-      width: clamp(78px, 12vw, 155px);
-      height: clamp(110px, 17vw, 220px);
-      z-index: 0;
-      opacity: 0.55;
-      pointer-events: none;
-      filter: drop-shadow(0 0 24px rgba(232,0,29,0.58));
-    }
-    .hero-cristo::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 15%;
-      height: 14%;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      background: rgba(232,0,29,0.92);
-      box-shadow: 0 0 34px rgba(232,0,29,0.90);
-    }
-    .hero-cristo .arms {
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      width: 96%;
-      height: 7%;
-      transform: translateX(-50%);
-      border-radius: 999px;
-      background: rgba(232,0,29,0.86);
-    }
-    .hero-cristo .body {
-      position: absolute;
-      top: 13%;
-      left: 50%;
-      width: 12%;
-      height: 42%;
-      transform: translateX(-50%);
-      border-radius: 999px 999px 35% 35%;
-      background: rgba(232,0,29,0.86);
-    }
-    .hero-cristo .base {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 72%;
-      height: 46%;
-      transform: translateX(-50%);
-      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-      background: linear-gradient(to bottom, rgba(232,0,29,0.35), rgba(0,0,0,0.02));
-    }
-
-    .hero-title-row {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: clamp(18px, 4vw, 36px);
-    }
-    .hero-logo-block {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-right: clamp(16px, 3vw, 28px);
-      border-right: 1px solid rgba(255,255,255,0.22);
-      flex-shrink: 0;
-    }
-    .hero-logo {
-      width: clamp(88px, 10vw, 135px);
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 12px 24px rgba(0,0,0,0.48)) drop-shadow(0 0 18px rgba(232,0,29,0.30));
-    }
-    .hero-title-text {
-      text-align: left;
-    }
-
     .hero h1 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(52px, 10vw, 100px);
@@ -479,24 +447,26 @@
 
     /* Ajustes para Telas Menores */
     @media (max-width: 600px) {
-      .hero-cristo {
-        top: 34px;
-        right: 10px;
-        width: 76px;
-        height: 108px;
-        opacity: 0.34;
+      .cristo-img {
+        right: -120px;
+        height: 58%;
+        opacity: 0.38;
       }
+
       .hero-title-row {
         flex-direction: column;
         gap: 16px;
       }
+
       .hero-logo-block {
         padding-right: 0;
         border-right: none;
       }
+
       .hero-logo {
         width: 96px;
       }
+
       .hero-title-text {
         text-align: center;
       }
@@ -517,11 +487,7 @@
 <body>
 
 <header class="hero">
-  <div class="hero-cristo" aria-hidden="true">
-    <span class="arms"></span>
-    <span class="body"></span>
-    <span class="base"></span>
-  </div>
+  <img src="cristo-silhueta.png" alt="" class="cristo-img" aria-hidden="true" />
 
   <div class="hero-tag">B2B Global Summit 2025</div>
 
@@ -529,6 +495,7 @@
     <div class="hero-logo-block">
       <img src="logo-andina.png" alt="Coca-Cola Andina Brasil" class="hero-logo" />
     </div>
+
     <div class="hero-title-text">
       <h1>ROUTES<br/><span>RIO DE JANEIRO</span></h1>
     </div>
