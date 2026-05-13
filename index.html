@@ -172,6 +172,23 @@
       box-shadow: 0 0 8px var(--red);
     }
 
+
+    /* Ajuste fino: subtítulo e bairros alinhados ao bloco ROUTES */
+    .hero-title-text .hero-sub {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .hero-title-text .hero-cities {
+      justify-content: flex-start;
+      margin-top: 30px;
+      gap: 26px;
+    }
+
+    .hero-title-text .hero-city:first-child {
+      margin-left: 0;
+    }
+
     /* ── NAV TABS ── */
     .tabs {
       display: flex;
@@ -468,6 +485,15 @@
 
     /* Ajustes para Telas Menores */
     @media (max-width: 600px) {
+
+      .hero-title-text .hero-sub {
+        text-align: center;
+      }
+
+      .hero-title-text .hero-cities {
+        justify-content: center;
+        gap: 18px;
+      }
       .cristo-img {
         right: -130px;
         height: 62%;
@@ -524,16 +550,17 @@
 
     <div class="hero-title-text">
       <h1>ROUTES<br/><span>RIO DE JANEIRO</span></h1>
-    </div>
-  </div>
 
-  <p class="hero-sub">Digital Transformation</p>
-  <div class="hero-cities">
-    <div class="hero-city"><span class="dot"></span> Copacabana</div>
-    <div class="hero-city"><span class="dot"></span> Leme</div>
-    <div class="hero-city"><span class="dot"></span> Botafogo</div>
-    <div class="hero-city"><span class="dot"></span> Tijuca</div>
-    <div class="hero-city"><span class="dot"></span> CADEG</div>
+      <p class="hero-sub">Digital Transformation</p>
+
+      <div class="hero-cities">
+        <div class="hero-city"><span class="dot"></span> Copacabana</div>
+        <div class="hero-city"><span class="dot"></span> Leme</div>
+        <div class="hero-city"><span class="dot"></span> Botafogo</div>
+        <div class="hero-city"><span class="dot"></span> Tijuca</div>
+        <div class="hero-city"><span class="dot"></span> CADEG</div>
+      </div>
+    </div>
   </div>
 </header>
 
